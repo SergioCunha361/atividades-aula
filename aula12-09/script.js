@@ -6,17 +6,17 @@ let livros = [
     {"titulo": "Um aaray no pedaço1", "qunatidade": "9"}
 ]
 function livrosComEstoqueSuficiente(livros){
-    // let resultado = [];
+    let resultado = [];
     // for let = 0; i < livros.length(livros); i++){
     //     if (livros[i].qunatidade >= 10){
     //         resultado.push(livros[i]);
     //     }
     // }
     livros.forEach(livros => {
-        if(livros.qunatidade >= 10){
+        if(livros.qunatidade >= 9){
             resultado.push(livros)
         }    
-    };
+    })
     if (resultado.length > 0){
         return resultado;
     } else {
