@@ -24,4 +24,4 @@ function quickSort(arr) {
   
   const unsortedArray = [5, 2, 9, 1, 7, 3];
   const sortedArray = quickSort(unsortedArray);
-  console.log(sortedArray); // Output: [1, 2, 3, 5, 7, 9]
+  console.table(sortedArray); // Output: [1, 2, 3, 5, 7, 9]
