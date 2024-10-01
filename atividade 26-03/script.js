@@ -10,8 +10,11 @@
 // let numeros = [34, 7, 23, 32, 5, 62];
 // numeros.push(9,12);
 // numeros.unshift(1);
+// numeros.sort((a, b) => b - a); //ordena ordem crescente 
+// //numeros.reverse(); // reverte em ordem descrescente
+// console.log("Array resultado: ", numeros);
 // numeros.sort((a, b) => a - b); //ordena ordem crescente 
-// numeros.reverse(); // reverte em ordem descrecente
+// //numeros.reverse(); // reverte em ordem crescente
 // console.log("Array resultado: ", numeros);
 
 
@@ -47,6 +50,7 @@
 //     return acumulador + valorAtual;},0);
 // console.log(soma);
 // console.log(typeof(soma));
+//console.log(isNaN(soma)); // retorna false pois soma é um numero
 
 
 // 4. Usando map() e reduce() para Dobrar e Somar Valores
@@ -55,6 +59,12 @@
 // ○ Reduza o novo array para obter a soma de todos os seus elementos.
 // ● Imprima o array dobrado e o resultado da soma.
 
+// let numeros = [1, 2, 3, 4, 5];
+// let numerosDobrados = numeros.map(numero => numero * 2);
+// let numerosSomados = numerosDobrados.reduce((acumulador, valor)=> {
+//     return acumulador + valor;
+// },0);
+// console.log(`O novo Array é [${numerosDobrados}], e a soma de todos elementos é ${numerosSomados}`);
 
 
 // 5. Contando Caracteres e Dividindo Frases
@@ -66,15 +76,15 @@
 // ○ Junte essas palavras em uma nova string, separadas por hífens (-).
 // ● Imprima a frase resultante.
 
-let frase = "A programação é divertida e desafiadora.";
-let numeroDeCaracteres = frase.length;
-console.log("A frase possui", numeroDeCaracteres, "caracteres.");
-let palavras = frase.split(" "); // Dividindo por espaços em branco
-console.log(palavras);
-let palavrasMaiusculas = frase.toUpperCase();
-console.log(palavrasMaiusculas)
-let palavrasJuntas = palavras.join('-');
-console.log(palavrasJuntas)
+// let frase = "A programação é divertida e desafiadora.";
+// let numeroDeCaracteres = frase.length;
+// console.log("A frase possui", numeroDeCaracteres, "caracteres.");
+// let palavrasSeparadas = frase.split(" "); // Dividindo por espaços em branco
+// console.log(palavrasSeparadas);
+// let palavrasMaiusculas = frase.toUpperCase();
+// console.log(palavrasMaiusculas)
+// let palavrasJuntas = palavrasSeparadas.join('-');
+// console.log(palavrasJuntas);
 
 
 // 6. Manipulando Arrays com splice() e slice()
@@ -117,9 +127,16 @@ console.log(palavrasJuntas)
 // ○ Some todos os preços filtrados.
 // ● Mostre o array com os preços aumentados, o array filtrado, e o total somado.
 
-let precos = [15.5, 10.0, 20.75, 30.0, 8.0];
-let novosPrecos = precos.map(preco => preco * 1.10);
-console.log(novosPrecos);
+// let precos = [15.5, 10.0, 20.75, 30.0, 8.0];
+// //math.round: Arredonda para o inteiro mais próximo.
+// //Se a parte decimal for 0.5 ou maior, arredonda para cima; 
+// let precosAumentados = precos.map(preco => Math.round(preco * 1.10));
+// console.log(precosAumentados);
+// let precosFiltrados = precosAumentados.filter(valor => valor > 20 );
+// let soma = precosFiltrados.reduce((acumulador, valor) => acumulador + valor, 0);
+// console.log(`O novo Array com aumento de 10% é [${precosAumentados}].`);
+// console.log(`O novo Array com nnúmeros maiores que 20 é [${precosFiltrados}].`);
+// console.log(`A soma do Array dos números maiores que 20 é [${soma}].`);
 
 
 
@@ -129,6 +146,32 @@ console.log(novosPrecos);
 // ○ Use filter() para selecionar apenas os números maiores que 50.
 // ○ Ordene o array filtrado de forma decrescente.
 // ● Imprima o array original, o array filtrado e o array ordenado.
+Resolvendo o Exercício: Analisando Números Aleatórios
+Entendendo o Problema:
+
+Precisamos gerar um conjunto de números aleatórios, filtrar os maiores que 50 e ordená-los de forma decrescente.
+
+Solução:
+
+JavaScript
+// Gerando 10 números aleatórios entre 0 e 100
+const numerosAleatorios = [];
+for (let i = 0; i < 10; i++) {
+  numerosAleatorios.push(Math.floor(Math.random() * 101)); // * 101 para incluir o 100
+}
+
+// Filtrando os números maiores que 50
+const numerosMaioresQue50 = numerosAleatorios.filter(numero => numero > 50);
+
+// Ordenando de forma decrescente
+const numerosOrdenados = numerosMaioresQue50.sort((a, b) => b - a);
+
+// Imprimindo os resultados
+console.log("Números aleatórios:", numerosAleatorios);
+console.log("Números maiores que 50:", numerosMaioresQue50);
+console.log("Números ordenados de forma decrescente:", numerosOrdenados);
+
+
 // 10. Condicional para Calcular Média
 // ● Dado o array let notas = [7.5, 8.0, 6.5, 9.0, 7.0]:
 // ○ Calcule a média das notas usando reduce().
