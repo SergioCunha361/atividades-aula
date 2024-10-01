@@ -146,31 +146,20 @@
 // ○ Use filter() para selecionar apenas os números maiores que 50.
 // ○ Ordene o array filtrado de forma decrescente.
 // ● Imprima o array original, o array filtrado e o array ordenado.
-Resolvendo o Exercício: Analisando Números Aleatórios
-Entendendo o Problema:
 
-Precisamos gerar um conjunto de números aleatórios, filtrar os maiores que 50 e ordená-los de forma decrescente.
+// const numerosAleatorios = [];
+// for (let i = 0; i < 10; i++) {
+//   numerosAleatorios.push(Math.floor(Math.random() * 101)); // * 101 para incluir o 100
+// }
+// // Filtrando os números maiores que 50
+// const numerosMaioresQue50 = numerosAleatorios.filter(numero => numero > 50);
 
-Solução:
+// // Ordenando de forma decrescente
+// const numerosOrdenadosDecrescente = numerosMaioresQue50.sort((a, b) => b - a);
 
-JavaScript
-// Gerando 10 números aleatórios entre 0 e 100
-const numerosAleatorios = [];
-for (let i = 0; i < 10; i++) {
-  numerosAleatorios.push(Math.floor(Math.random() * 101)); // * 101 para incluir o 100
-}
-
-// Filtrando os números maiores que 50
-const numerosMaioresQue50 = numerosAleatorios.filter(numero => numero > 50);
-
-// Ordenando de forma decrescente
-const numerosOrdenados = numerosMaioresQue50.sort((a, b) => b - a);
-
-// Imprimindo os resultados
-console.log("Números aleatórios:", numerosAleatorios);
-console.log("Números maiores que 50:", numerosMaioresQue50);
-console.log("Números ordenados de forma decrescente:", numerosOrdenados);
-
+// console.log("Números aleatórios:", numerosAleatorios);
+// console.log("Números maiores que 50:", numerosMaioresQue50);
+// console.log("Números ordenados de forma decrescente:", numerosOrdenadosDecrescente);
 
 // 10. Condicional para Calcular Média
 // ● Dado o array let notas = [7.5, 8.0, 6.5, 9.0, 7.0]:
@@ -178,18 +167,52 @@ console.log("Números ordenados de forma decrescente:", numerosOrdenados);
 // ○ Verifique se a média é maior ou igual a 7 para decidir se o aluno foi aprovado ou
 // reprovado.
 // ● Imprima a média e o resultado ("Aprovado" ou "Reprovado").
+
+// let notas = [7.5, 8.0, 6.5, 9.0, 7.0];
+// let mediaNotas = notas.reduce((total, nota)  => total + nota, 0)/2
+// console.log(mediaNotas)
+// for (let i = 0; i < notas.length; i++){
+//     if (notas[i] >=  7) {
+//         console.log(`o aluno tirou nota ${notas[i]} - foi Aprovado.`)
+//     }else{
+//         console.log(`o aluno tirou nota ${notas[i]} - foi Reprovado.`)  
+//     }
+//   }
+
+
 // 11. Manipulação de String com Interpolação e Substituição
 // ● Crie variáveis let cidade = "São Paulo" e let clima = "ensolarado":
 // ○ Use Template Literals para criar uma frase como: "Hoje em São Paulo está
 // ensolarado."
 // ○ Substitua a palavra "ensolarado" por "chuvoso".
 // ● Imprima a frase original e a frase modificada.
+
+// let cidade = "São Paulo" , clima = "ensolarado";
+// console.log(`"Hoje em ${cidade} está ${clima}."`)
+// clima = "chuvoso";
+// console.log(`"Hoje em ${cidade} está ${clima}."`)
+
+
+
 // 12. Reversão e Capitalização de Palavras
 // ● Dada a string let texto = "javascript é incrível":
 // ○ Divida o texto em palavras separadas.
 // ○ Inverta a ordem das palavras.
 // ○ Converta a primeira letra de cada palavra para maiúscula.
 // ● Imprima o texto resultante.
+
+// let texto = "javascript é incrível";
+// let palavrasSeparadas = texto.split(" ");
+// console.log(palavrasSeparadas);
+// palavrasInvertidas = palavrasSeparadas.reverse();
+// console.log(palavrasInvertidas);
+
+// //Converter a primeira letra de cada palavra para maiúscula
+
+// const palavrasCapitalizadas = palavrasInvertidas.map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1));
+// console.log(palavrasCapitalizadas);
+
+
 // 13. Comparando Valores com switch e if
 // ● Crie uma variável let mes = 6, representando um mês do ano:
 // ○ Use switch para verificar qual é o mês (por exemplo, 6 = Junho) e imprimir o
@@ -197,18 +220,96 @@ console.log("Números ordenados de forma decrescente:", numerosOrdenados);
 // ○ Use if para verificar se o mês é parte do primeiro semestre (1-6) ou do segundo
 // semestre (7-12).
 // ● Mostre o nome do mês e a informação do semestre.
+
+
+// 13. Comparando Valores com switch e if
+// ● Crie uma variável let mes = 6, representando um mês do ano:
+// ○ Use switch para verificar qual é o mês (por exemplo, 6 = Junho) e imprimir o
+// nome do mês.
+// ○ Use if para verificar se o mês é parte do primeiro semestre (1-6) ou do segundo
+// semestre (7-12).
+// ● Mostre o nome do mês e a informação do semestre.
+
+// let mes = 6;    ;
+// switch (mes){
+//     case 1:
+//         console.log(`O mês ${mes} é o mês de "Janeiro."`);
+//         break;
+//     case 2:
+//         console.log(`O mês ${mes} é o mês de "Fevereiro."`);
+//         break;
+//     case 3:
+//     console.log(`O mês ${mes} é o mês de "Março."`);
+//         break;
+//     case 4:
+//         console.log(`O mês ${mes} é o mês de "Abril."`);
+//         break;
+//     case 5:
+//         console.log(`O mês ${mes} é o mês de "Maio."`);
+//         break;
+//     case 6:
+//         console.log(`O mês ${mes} é o mês de "Junho."`);
+//         break;
+//     case 7:
+//         console.log(`O mês ${mes} é o mês de "Julho."`);
+//         break;
+//     case 8:
+//         console.log(`O mês ${mes} é o mês de "Agosto."`);
+//         break;
+//     case 9:
+//         console.log(`O mês ${mes} é o mês de "Setembro."`);
+//         break;
+//     case 10:
+//         console.log(`O mês ${mes} é o mês de "Outubro."`);
+//         break;
+//     case 11:
+//         console.log(`O mês ${mes} é o mês de "Novembro."`);
+//         break;
+//     case 12:
+//         console.log(`O mês ${mes} é o mês de "Dezembro."`);
+//         break;  
+//     default:
+//         console.log(`O mês ${mes} não existe."`);
+//         break;
+// };
+// if (mes > 0 && mes < 13){
+//     if (mes > 0 && mes < 7){
+//         console.log("Primeiro Semestre");
+//     }else {
+//         console.log("Segundo Semestre");
+//     }
+// };        
+
 // 14. Manipulando Números com parseInt() e Math
 // ● Considere a string let numeroStr = "45.67":
 // ○ Converta a string para um número inteiro usando parseInt().
 // ○ Arredonde o número para baixo usando Math.floor().
 // ○ Arredonde o número para cima usando Math.ceil().
 // ● Imprima todos os resultados.
+
+// let numero = 45.67;
+// let numeroStr = "45.67";
+// let numeroInteiro = parseInt(numeroStr);
+// let numeroArredondado1 = Math.floor(numero); //arredodando para baixo
+// let numeroArredondado2 = Math.ceil(numero); // arredodando para cima
+// console.log(numero, numeroInteiro, numeroArredondado1, numeroArredondado2);
+
 // 15. Encontrando Caracteres em uma String
 // ● Dada a string let palavra = "programador":
 // ○ Use charAt() para encontrar o terceiro caractere.
 // ○ Use indexOf() para encontrar a posição do caractere "a".
 // ○ Extraia a primeira metade da palavra usando slice().
 // ● Imprima todos os resultados.
+
+
+let palavra = "programador";
+let terceiroCaracter = palavra.charAt(2);
+let localizaA = palavra.indexOf("a");
+let metadePalavra = palavra.slice(0, parseInt(palavra.length / 2));  
+console.log(terceiroCaracter);
+console.log(localizaA,);
+console.log(metadePalavra);
+
 // 16. Uso de for para Contagem de Caracteres
 // ● Dada a string let frase = "Estudar programação é ótimo!":
 // ○ Conte quantas vezes a letra "a" aparece na frase usando um loop for.
