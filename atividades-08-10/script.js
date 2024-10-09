@@ -1,3 +1,11 @@
+// 1. Adicionar e Remover Elementos de um Array
+// ● Dado o array let frutas = ["Maçã", "Banana", "Laranja"], adicione
+// "Manga" ao final, "Uva" ao início e remova "Laranja". Imprima o array resultante.
+// let frutas = ["Maçã", "Banana", "Laranja"];
+// frutas.push("Manga");
+// frutas.unshift("Uva");
+// console.log(frutas);
+
 // 2. Concatenar Strings com Template Literals
 // ● Crie duas variáveis saudacao = "Olá" e nome = "Maria". Concatene essas
 // variáveis usando template literals e imprima a mensagem "Olá, Maria!".
@@ -59,10 +67,13 @@
 // console.log(numeros);
 
 
+// 10. Contar Caracteres em uma String
+// ● Dada a string let frase = "Programação é divertida", conte quantos
+// caracteres a string possui (incluindo espaços) e imprima o total.
+// let frase = "Programação é divertida";
+// console.log(frase.length);
 
-
-
-/ 11. Dividir String em Palavras
+// 11. Dividir String em Palavras
 // ● Dada a string let frase = "Aprender JavaScript é muito bom", divida a
 // frase em palavras e imprima o array resultante.
 // let frase = "Aprender JavaScript é muito bom";
@@ -86,48 +97,65 @@
 // 14. Filtrar Números Maiores que 50 em um Array Aleatório
 // ● Gere um array com 10 números aleatórios entre 1 e 100. Filtre os números maiores que
 // 50 e imprima o array filtrado.
-let numeros = [];
-let numeros50 = [];
-for (let i = 0; i < 10; i++){
-   numeros.push(Math.floor(Math.random()* 101));
-}
-let numeros50 = numeros.filter(numero => numero > 50) ;
-console.log(numeros);
-console.log(numeros50);
-// 10. Contar Caracteres em uma String
-// ● Dada a string let frase = "Programação é divertida", conte quantos
-// caracteres a string possui (incluindo espaços) e imprima o total.
-// 11. Dividir String em Palavras
-// ● Dada a string let frase = "Aprender JavaScript é muito bom", divida a
-// frase em palavras e imprima o array resultante.
-// 12. Reverter a Ordem das Palavras em uma String
-// ● Dada a string let texto = "Eu gosto de JavaScript", inverta a ordem das
-// palavras e imprima a string resultante.
-// 13. Usar map() para Dobrar Valores de um Array
-// ● Dado o array let numeros = [1, 2, 3, 4, 5], use map() para criar um novo
-// array com os valores dobrados e imprima o resultado.
-// 14. Filtrar Números Maiores que 50 em um Array Aleatório
-// ● Gere um array com 10 números aleatórios entre 1 e 100. Filtre os números maiores que
-// 50 e imprima o array filtrado.
+// let numeros = [];
+// for (let i = 0; i < 10; i++){
+//    numeros.push(Math.floor(Math.random()* 101));
+// }
+// let numeros50 = numeros.filter(numero => numero > 50) ;
+// console.log(numeros);
+// console.log(numeros50);
+
 // 15. Somar Números Aleatórios e Verificar Tipo
 // ● Gere um array com 5 números aleatórios entre 1 e 100, some todos os números e
 // verifique se o resultado é um número usando isNaN(). Imprima o valor somado e o
 // resultado da verificação.
+// let numeros = [];
+// for (let i = 0; i < 5; i++){
+//    numeros.push(Math.floor(Math.random()* 101));
+// }
+// console.log(numeros);
+// let soma = numeros.reduce((acc, valor)  => acc + valor, 0);
+// console.log(!isNaN(soma));
+// console.log(soma);
+
 // 16. Substituir Palavras em uma String
 // ● Dada a string let frase = "O clima está ensolarado", substitua a palavra
 // "ensolarado" por "chuvoso" e imprima a string resultante.
+// let frase = "O clima está ensolarado";
+// let novaFrase = frase.replace("ensolarado", "chuvoso");
+// console.log(novaFrase);
+
+
 // 17. Ordenar um Array de Números
 // ● Dado o array let numeros = [40, 10, 30, 20, 50], ordene os números de
 // forma crescente e imprima o array ordenado.
+// let numeros = [40, 10, 30, 20, 50];
+// numeros.sort((a, b) => a - b);
+// console.log(numeros);
+
 // 18. Calcular Média de Notas
 // ● Dado o array let notas = [7.5, 8.0, 6.5, 9.0, 7.0], calcule a média das
 // notas e verifique se o aluno foi aprovado (média >= 7). Imprima a média e o resultado
 // ("Aprovado" ou "Reprovado").
+// let notas = [7.5, 8.0, 6.5, 9.0, 7.0];
+// let media = notas.reduce((acc, valor) => acc + valor ,0)/notas.length;
+// let resultado = media >= 7 ? 'aprovado' : 'reprovado';
+// console.log(`A média do aluno é: ${media}`);
+// console.log(`O aluno foi ${resultado}`);
+
 // 19. Arredondar um Número
 // ● Dada a string let numeroStr = "45.67", converta a string em número inteiro,
 // arredonde para baixo e depois para cima usando Math.floor() e Math.ceil().
 // Imprima os resultados.
-// 20. Contar Caracteres Específicos em uma String
+// let numeroStr = "45.67";
+// let numInteiro = parseInt(numeroStr);
+// let numeArreBaixo = Math.floor(Number(numeroStr));
+// let numeArreCima  = Math.ceil(Number(numeroStr));
+// console.log(`A string ${numeroStr} convertida em um numero inteiro é ${numInteiro}.`);
+// console.log(`A string ${numeroStr} convertida em número e arredondda para Baixo é ${numeArreBaixo}.`);
+// console.log(`A string ${numeroStr} convertida em número e arredondada para cima é ${numeArreCima}.`);
+    
+// 20. Contar Caracteres Específicos em uma Stringconsole.log(`A string ${numeroStr} convertida em um numero inteiro é ${numInteiro}.`)console.log(`A string ${numeroStr} convertida em um numero inteiro é ${numInteiro}.`)
 // ● Dada a string let palavra = "programador", conte quantas vezes a letra "a"
 // aparece na palavra. Imprima o resultado.
 // 21. Verificar Se Duas Strings São Iguais Ignorando Maiúsculas
