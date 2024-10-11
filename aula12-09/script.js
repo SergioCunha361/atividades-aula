@@ -7,7 +7,6 @@ let livros = [
 ];
 function livrosComEstoqueSuficiente(livros){
     let resultado = [];
-<<<<<<< HEAD
     // for let = 0; i < livros.length(livros); i++){
     //     if (livros[i].qunatidade >= 10){
     //         resultado.push(livros[i]);
@@ -18,21 +17,6 @@ function livrosComEstoqueSuficiente(livros){
             resultado.push(livros)
         }    
     })
-=======
-    for (let i = 0; i < livros.length; i++){
-      if (livros[i].quantidade >= 09){
-          resultado.push(livros[i]);
-      };
-    };
-    //----------------------------------
-    // ou usando funçao forEach
-    // livros.forEach(livro => {
-    //     if(livro.quantidade >= 09){
-    //         resultado.push(livro)
-    //     }    
-    // });
-    //-------------------------------------
->>>>>>> 5e6107ab90c7ccbcc771b5689a3190a6317e34c5
     if (resultado.length > 0){
         return resultado;
     } else {
